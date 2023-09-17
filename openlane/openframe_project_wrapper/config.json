@@ -89,5 +89,5 @@
     "FP_PDN_CFG": "dir::pdn_cfg.tcl",
     "FP_DEF_TEMPLATE": "dir::fixed_dont_change/openframe_project_wrapper.def",
     "RUN_MAGIC_DRC": 0,
-    "RUN_LVS": 0
+    "RUN_LVS": 1
 }

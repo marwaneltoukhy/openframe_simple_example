@@ -5,16 +5,16 @@ report_clock_skew
 Clock clk
 Latency      CRPR       Skew
 openframe_example/_35396_/CLK ^
-  15.57
+  15.58
 openframe_example/_35767_/CLK ^
-   7.74     -0.66       7.17
+   7.75     -0.66       7.17
 
 Clock clk_hkspi_sck
 Latency      CRPR       Skew
 openframe_example/_35307_/CLK ^
-   3.39
+   3.41
 openframe_example/_35308_/CLK ^
-   1.93     -0.20       1.25
+   1.95     -0.21       1.25
 
 Clock dll_clk
 Latency      CRPR       Skew
