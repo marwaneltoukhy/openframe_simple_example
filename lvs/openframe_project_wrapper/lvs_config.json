@@ -1,0 +1,36 @@
+{
+	"TOP_SOURCE": "openframe_project_wrapper",
+	"TOP_LAYOUT": "$TOP_SOURCE",
+	"EXTRACT_FLATGLOB": [
+		""
+	],
+	"EXTRACT_ABSTRACT": [
+		"*__fill_*",
+		"*__fakediode_*",
+		"*__tapvpwrvgnd_*"
+	],
+	"LVS_FLATTEN": [
+		"vccd1_connection",
+		"vssd1_connection"
+	],
+	"LVS_NOFLATTEN": [
+		""
+	],
+	"LVS_IGNORE": [
+		""
+	],
+	"LVS_SPICE_FILES": [
+		"$PDK_ROOT/$PDK/libs.ref/sky130_fd_sc_hd/spice/sky130_ef_sc_hd__decap_12.spice",
+		"$PDK_ROOT/$PDK/libs.ref/sky130_fd_sc_hd/spice/sky130_fd_sc_hd.spice",
+		"$PDK_ROOT/$PDK/libs.ref/sky130_sram_macros/spice/sky130_sram_2kbyte_1rw1r_32x512_8.spice"
+	],
+	"LVS_VERILOG_FILES": [
+		"$UPRJ_ROOT/verilog/gl/picosoc.v",
+		"$UPRJ_ROOT/verilog/gl/vccd1_connection.v",
+		"$UPRJ_ROOT/verilog/gl/vssd1_connection.v",
+		"$UPRJ_ROOT/verilog/gl/digital_locked_loop.v",
+		"$UPRJ_ROOT/verilog/gl/$TOP_SOURCE.v"
+	],
+	"LAYOUT_FILE": "$UPRJ_ROOT/gds/$TOP_LAYOUT.gds"
+}
+
