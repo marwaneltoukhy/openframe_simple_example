@@ -101,35 +101,18 @@ module openframe_project_wrapper (
     input  [`OPENFRAME_IO_PADS-1:0] gpio_loopback_zero
 );
 
-	picosoc openframe_example (
+	simple_design mprj (
 `ifdef USE_POWER_PINS
-		.VPWR(vccd1),
-		.VGND(vssd1),
+	.vccd1(vccd1),	// User area 1 1.8V power
+	.vssd1(vssd1),	// User area 1 digital ground
 `endif
-	    .porb(porb_l),
-	    .por(por_l),
-	    .resetb(resetb_l),
-	    .mask_rev(mask_rev),
-	    .gpio_in(gpio_in),
-	    .gpio_out(gpio_out),
-	    .gpio_oeb(gpio_oeb),
-	    .gpio_ieb(gpio_inp_dis),
-	    .gpio_ib_mode_sel(gpio_ib_mode_sel),
-	    .gpio_vtrip_sel(gpio_vtrip_sel),
-	    .gpio_slow_sel(gpio_slow_sel),
-	    .gpio_dm2(gpio_dm2),
-	    .gpio_dm1(gpio_dm1),
-	    .gpio_dm0(gpio_dm0),
-	    .gpio_loopback_one(gpio_loopback_one),
-	    .gpio_loopback_zero(gpio_loopback_zero)
 
-	    /* NOTE:  Openframe signals not used in picosoc:	*/
-	    /* porb_h:    3.3V domain signal			*/
-	    /* resetb_h:  3.3V domain signal			*/
-	    /* gpio_in_h: 3.3V domain signals			*/
-	    /* analog_io: analog signals			*/
-	    /* analog_noesd_io: analog signals			*/
-	);
+    .clk(gpio_in[38]),
+    .rst(gpio_in[37]),
+    .a(gpio_in[36]),
+    .b(gpio_in[35]),
+    .out(gpio_out[34])
+);
 
 	/* All analog enable/select/polarity and holdover bits	*/
 	/* will not be handled in the picosoc module.  Tie	*/

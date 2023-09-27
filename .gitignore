@@ -2,5 +2,13 @@
 /precheck_results/
 */tmp
 */*/tmp
-venv/
-__pycache__/
+*.hex*
+*.lst
+*.vcd
+*.gtkw
+/env
+/venv
+/caravel
+/dependencies
+/mgmt_core_wrapper
+/logs

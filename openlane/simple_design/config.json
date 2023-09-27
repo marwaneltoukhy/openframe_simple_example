@@ -1,0 +1,46 @@
+{
+    "DESIGN_NAME": "simple_design",
+    "DESIGN_IS_CORE": 0,
+    "RUN_LINTER": 0,
+    "VERILOG_FILES": [
+        "dir::../../verilog/rtl/simple_design.v"
+    ],
+    "CLOCK_PERIOD": 25,
+    "CLOCK_PORT": "clk",
+    "DIE_AREA": "0 0 520 520",
+    "FP_SIZING": "absolute",
+    "VDD_NETS": [
+        "vccd1"
+    ],
+    "GND_NETS": [
+        "vssd1"
+    ],
+    "RUN_CVC": 1,
+    "pdk::sky130*": {
+        "RT_MAX_LAYER": "met4",
+        "scl::sky130_fd_sc_hd": {
+            "CLOCK_PERIOD": 25
+        },
+        "scl::sky130_fd_sc_hdll": {
+            "CLOCK_PERIOD": 10
+        },
+        "scl::sky130_fd_sc_hs": {
+            "CLOCK_PERIOD": 8
+        },
+        "scl::sky130_fd_sc_ls": {
+            "CLOCK_PERIOD": 10,
+            "SYNTH_MAX_FANOUT": 5
+        },
+        "scl::sky130_fd_sc_ms": {
+            "CLOCK_PERIOD": 10
+        }
+    },
+    "pdk::gf180mcuC": {
+        "STD_CELL_LIBRARY": "gf180mcu_fd_sc_mcu7t5v0",
+        "CLOCK_PERIOD": 24.0,
+        "FP_CORE_UTIL": 40,
+        "RT_MAX_LAYER": "Metal4",
+        "SYNTH_MAX_FANOUT": 4,
+        "PL_TARGET_DENSITY": 0.45
+    }
+}
